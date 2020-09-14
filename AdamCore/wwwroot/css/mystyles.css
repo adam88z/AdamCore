@@ -1,0 +1,6 @@
+﻿.img-responsive {
+    max-height: 360px;
+    height: 360px !important;
+    object-fit: cover !important;
+    width: 100%;
+}

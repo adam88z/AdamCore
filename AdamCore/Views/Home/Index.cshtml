@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+<div class="home-banner">
+    <h1>Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="home-image">
+    <script>
+        //$("#homeimage").attr("src", data[0]);
+
+        //setInterval(ajaxCall, 5000);
+
+                        $.ajax({
+                            url: '@Url.Action("ImageUploadGet", "Home")', //retrieves the array and stores it in 'data'
+                            data: 'data',
+                            success: function (data) {
+                                var i = 0;
+                                $("#homeimage").attr("src", data[i]);
+
+                                var i = 0;
+
+                                setInterval(function () {
+                                    document.getElementById("homeimage").src = data[i];
+                                    if (i == (data.length - 1)) {
+                                        i = 0;
+                                        //you can even clear interval here to make heading stay as last one in array
+                                        //cleanInterval(intervalId);
+
+                                    } else {
+                                        i++;
+                                    }
+                                }, 8000)
+
+
+                            }
+                        });
+    </script>
+
+    <img id="homeimage" class="homeimage" src="" alt="" />
+    <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
+</div>
+
+<div class="homey-images">
+    <img class="" src="images/bottles2.jpg" alt="" />
+    <img class="" src="images/cool-bridge.jpg" alt="" />
+    <img class="" src="images/tucco_centered.jpg" alt="" />
+    <img class="" src="images/walkway.jpg" alt="" />
+    <img class="" src="images/newsnip3.jpg" alt="" />
+    <img class="" src="images/yellow_flower.jpg" alt="" />
+    <img class="" src="images/birdy.jpg" alt="" />
+    <img class="" src="images/plane.jpg" alt="" />
+</div>
+
+<div class="code-sandbox">
+    <p>Welcome to Adam James's code sandbox.</p>
+</div>
+
+<div class="home-textbox1">
+    <p>Just a little bit of it can bring you up or down.</p>
+</div>
+<div class="home-textbox2">
+    <p>Just a little bit of it can bring you up or down.</p>
+</div>
+
+<div class="work-showcase-box">
+    <div class="showcase1">
+        <img src="~/images/rs-slice-1.jpg" />
+    </div>
+    <div class="showcase2">
+        <img src="~/images/rs-slice-2.jpg" />
+    </div>
+    <div class="showcase3">
+        <img src="~/images/rs-slice-3.jpg" />
+    </div>
+</div>
