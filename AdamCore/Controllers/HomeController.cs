@@ -40,7 +40,7 @@ namespace AdamCore.Controllers
         public String[] ImageUploadGet()
         {
 
-            string[] images = { "images/orb.jpg", "images/maddi_web2.jpg", "images/tuccs.jpg" };
+            string[] images = { "images/construction_lights.jpg", "images/maddi_web2.jpg", "images/tuccs.jpg" };
 
             //string x = "images/cool-bridge.jpg";
             //string y = "images/oakland_street.jpg";

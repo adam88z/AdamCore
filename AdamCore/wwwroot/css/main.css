@@ -1282,25 +1282,60 @@ header{
     color: green;
 }
 
-.stickyheader {
+/*Sticky gets applied to NAVBAR CONTAINER when the user scrolls down the page.
+     *Sticky is basicaly navbar container so think of it that way.
+     */
+.sticky {
+    width: 100%;
     position: fixed;
+    z-index: 10;
+    background-color: #f4f5f6;
+    color: var(--color-text-default);
     top: 0;
-    left: 0;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
 }
 
-    .stickyheader .bar1 {
-        
+    .sticky .navbar ul li a {
+        color: #333;
     }
 
-    .stickyheader .bar2 {
-        
+    .sticky .navbar ul > li:hover {
+        /*background-color: #e1e2e3;*/
     }
 
-    .stickyheader .bar3 {
-        
+    .sticky .navbar ul li ul {
+        background-color: #e1e2e3;
+        background-color: #fefefe;
     }
 
+    /*.sticky .navbar ul > li:hover > a {
+            border-bottom: 1px solid #333;
+        }*/
+
+    .sticky .navbar ul > li > ul > li:hover a {
+        color: #666;
+        border-bottom: 1px solid #666;
+    }
+
+    .sticky .navbar ul li ul li a {
+        color: #666;
+    }
+
+    .sticky p {
+        color: #666;
+    }
+
+    .sticky .navigation-container ul li a {
+        color: var(--color-text-default);
+    }
+
+        .sticky .navigation-container ul li a:hover {
+            color: var(--color-text-default);
+        }
+
+    .sticky .label-nav {
+        margin-top: 500px;
+    }
 
 @media screen and (min-width: 480px) { /* STYLES ABOVE 480px */
 
