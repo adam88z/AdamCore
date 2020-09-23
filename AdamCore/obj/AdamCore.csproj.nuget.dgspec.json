@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adam\\source\\repos\\AdamCore\\AdamCore\\AdamCore.csproj": {}
+    "C:\\Users\\adam.james\\Source\\Repos\\AdamCore\\AdamCore\\AdamCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adam\\source\\repos\\AdamCore\\AdamCore\\AdamCore.csproj": {
+    "C:\\Users\\adam.james\\Source\\Repos\\AdamCore\\AdamCore\\AdamCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adam\\source\\repos\\AdamCore\\AdamCore\\AdamCore.csproj",
+        "projectUniqueName": "C:\\Users\\adam.james\\Source\\Repos\\AdamCore\\AdamCore\\AdamCore.csproj",
         "projectName": "AdamCore",
-        "projectPath": "C:\\Users\\adam\\source\\repos\\AdamCore\\AdamCore\\AdamCore.csproj",
-        "packagesPath": "C:\\Users\\adam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adam\\source\\repos\\AdamCore\\AdamCore\\obj\\",
+        "projectPath": "C:\\Users\\adam.james\\Source\\Repos\\AdamCore\\AdamCore\\AdamCore.csproj",
+        "packagesPath": "C:\\Users\\adam.james\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adam.james\\Source\\Repos\\AdamCore\\AdamCore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adam.james\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -21,6 +21,7 @@ namespace AdamCore.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 
@@ -35,7 +36,12 @@ namespace AdamCore.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [HttpGet]
+        public int MyAction()
+        {
 
+            return 666;
+        }
 
         public String[] ImageUploadGet()
         {
