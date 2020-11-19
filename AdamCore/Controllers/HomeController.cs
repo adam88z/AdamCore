@@ -12,6 +12,12 @@ namespace AdamCore.Controllers
     public class HomeController : Controller
     {
 
+        public string DatabaseConnection ()
+        {
+            string a = "hi";
+            return a;
+        }
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
