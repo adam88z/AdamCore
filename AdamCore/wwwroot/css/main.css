@@ -1112,7 +1112,6 @@ header{
     }
 
         .navbar-container ul li a {
-            padding: 0 12px;
             position: relative;
             display: block;
             text-decoration: none;
@@ -1123,6 +1122,8 @@ header{
             margin: 0 auto;
             transition: color .125s ease-in-out;
             line-height: 44px;
+            width:90px;
+            text-align:center;
         }
 
     .navbar-container > ul > li > a:hover {
@@ -1382,6 +1383,14 @@ header{
 	margin: 0 auto;
 	background: radial-gradient(rgba(33,36,39,0),rgba(33,36,39,.8));
 	z-index: 2;
+}
+
+.honey {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+.honey p {
+    text-align: center;
 }
 /* ---------------------------------------------------- Media Queries --------------------------------------------------------------------------------------------- */
 
