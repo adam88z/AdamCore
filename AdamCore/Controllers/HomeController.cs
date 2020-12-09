@@ -60,7 +60,5 @@ namespace AdamCore.Controllers
             return images;
         }
 
-
-
     }
 }
