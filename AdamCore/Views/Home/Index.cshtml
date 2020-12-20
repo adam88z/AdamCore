@@ -5,7 +5,7 @@
 
 <div class="home-banner">
     <h1>Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p><a href="https://docs.microsoft.com/aspnet/core">Build Web apps with ASP.NET Core</a></p>
 </div>
 
 <div class="home-image">
@@ -74,22 +74,19 @@
     <p>Just a little bit of it can bring you up or down.</p>
 </div>
 
-<div class="work-showcase-box">
-    <div class="showcase1">
-        <img src="~/images/rs-slice-1.jpg" />
-    </div>
-    <div class="showcase2">
-        <img src="~/images/rs-slice-2.jpg" />
-    </div>
-    <div class="showcase3">
-        <img src="~/images/rs-slice-3.jpg" />
-    </div>
+<div style="grid-column: 1 / -1; text-align: center;">
+    <p>OnClick this button will call a method or function or action result on the server, handled by c# code.</p>
+    <a asp-controller="Home" asp-action="RussellStandard"><h1 style="font-size:2rem; color: #091852;">RussellStandard</h1></a>
 </div>
 
-<div>
-    <p>Time for some client to server side action!action!action!</p>
-    <p>This will be a button that is on the client side.</p>
-    <p>OnClick this button will call a method or function or action result on the server, handled by c# code.</p>
-    <a asp-controller="Home" asp-action="MyAction">click me i guess</a>
-
+<div class="work-showcase-box">
+    <div>
+        <img src="~/images/rs-slice-1.jpg" />
+    </div>
+    <div>
+        <img src="~/images/rs-slice-2.jpg" />
+    </div>
+    <div>
+        <img src="~/images/rs-slice-3.jpg" />
+    </div>
 </div>

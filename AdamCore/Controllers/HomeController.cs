@@ -43,10 +43,10 @@ namespace AdamCore.Controllers
         }
 
         [HttpGet]
-        public int MyAction()
+        public IActionResult RussellStandard()
         {
 
-            return 666;
+            return View();
         }
 
         public String[] ImageUploadGet()
