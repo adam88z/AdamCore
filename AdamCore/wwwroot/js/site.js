@@ -88,3 +88,39 @@ function stickyHeader() {
     }
 }
 
+
+
+
+
+
+
+
+// This says if the mouse click IS NOT hamburger or and of hamburgers descendants THEN remove the overlay class.
+// Overlay is applied when the user toggles the hamburger function
+$(document).mouseup(function (e) {
+    if (!$("#navigation-container").is(e.target)  // if the target of the click isn't the container...
+        && !$(".hamburger").is(e.target)
+        && !$(".hamburger-inner").is(e.target)
+        && $("#navigation-container").has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        $('#overlay').hide();
+
+        $("#navigation-container").hide();
+    }
+});
+
+function functionHamburgerMenu(x) {
+    //x.classList.toggle("change");
+    //$(".hamburger-container").stopPropagation(); "stopPropogation" interrupts the operation of the DOM somehow
+
+    if ($(window).innerWidth() <= 600) { $(".hamburger-container").toggleClass("hamburger-stay"); }
+    if ($(window).innerWidth() > 600) { $(".hamburger-container").removeClass("hamburger-stay"); }
+
+    $("#overlay").toggle();
+
+    $("#navigation-container").animate({
+        height: "toggle"
+    }, 100, function () {
+        // Animation complete.
+    });
+}

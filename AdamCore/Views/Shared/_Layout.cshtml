@@ -13,24 +13,47 @@
 <body>
     <header>
         <nav class="navbar-container" id="navbar-container">
-                <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>-->
-                <div>
-                    <ul>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">AdamCore</a>
-                        </li>
-                        <li>
-                            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li>
-                            <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>-->
+            <div class="navbar-container-menu">
+                <ul>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">AdamCore</a>
+                    </li>
+                    <li>
+                        <a class="" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li>
+                        <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="hamburger-container" class="hamburger-container">
+                <div class="hamburger-inner" onclick="functionHamburgerMenu(this)" title="navigation">
+                    <div class="hamburger icon-hamburger">
+                    </div>
                 </div>
+            </div>
         </nav>
+
+
+        <div class="navigation">
+            <ul>
+                <li>hi</li>
+            </ul>
+        </div>
+
+             <div class="navigation-container clearfix" id="navigation-container">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/About">About Me</a></li>
+                    <li><a href="/Home/RussellStandard">Russell Standard</a></li>
+                </ul>
+            </div>
+
     </header>
 
     @RenderBody()
