@@ -1522,6 +1522,24 @@ header{
         margin-top: 500px;
     }
 
+.resume-download {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 40px 0;
+}
+.resume-download a {
+    border: 1px solid #c6c6c6;
+    padding: 10px;
+    margin: 0 4px;
+    background-color: #f7f8f9;
+}
+    .resume-download a:hover {
+        background-color: #f1f2f3;
+    }
+
+/* ---------------------------------------------------- Media Queries --------------------------------------------------------------------------------------------- */
+
+
 @media screen and (min-width: 480px) { /* STYLES ABOVE 480px */
 
     .col1 {
@@ -1576,7 +1594,7 @@ header{
 .honey p {
     text-align: center;
 }
-/* ---------------------------------------------------- Media Queries --------------------------------------------------------------------------------------------- */
+
 
 @media screen and (min-width: 600px) { /* STYLES ABOVE 600px */
     .navbar-container-menu {
