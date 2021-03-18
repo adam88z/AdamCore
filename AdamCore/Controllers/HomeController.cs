@@ -43,6 +43,13 @@ namespace AdamCore.Controllers
         }
 
         [HttpGet]
+        public IActionResult ASCE()
+        {
+
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult RussellStandard()
         {
 

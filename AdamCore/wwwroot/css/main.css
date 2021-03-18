@@ -166,41 +166,48 @@ header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/thumbnails/rock-background.jpg);
 }
 
-.homeimage {
-    height:400px;
-    width: 100%;
-    border-radius: 0;
-    border: none;
-}
-
 .home-image {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
-    position: relative;
     justify-content: space-around;
     flex-wrap: wrap;
     height: auto;
     width: 100%;
     text-align: left;
     margin: 0 0 2rem 0;
-    background-color: #f4f5f6;
-    padding: 20px;
     overflow: hidden;
     position: relative;
     grid-column: 1 / -1;
     align-content: center;
     padding: 0;
 }
-
-    .home-image div {
-        background-color: #fff;
-    }
-
     .home-image img {
         grid-column: 1 / -1;
         object-fit: cover;
+        opacity: .9;
+        filter: brightness(50%);
     }
 
+.homeimage {
+    height: 400px;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+
+}
+
+.hero-text {
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #fff;
+}
 .homey-images {
     grid-column: 2 / 8;
     display: flex;
@@ -1148,7 +1155,13 @@ header{
 }
 .work-experience ul li p {
 }
-
+    .work-experience ul li img {
+        margin: 10px;
+        height: 200px;
+        border: 1px solid #e1e2e3;
+        border-radius: 4px;
+        box-shadow: 3px 4px 6px hsla(3,10%,60%,3);
+    }
 .navigation {
     /*overflow: hidden;*/
 	grid-column: 6 / 8;

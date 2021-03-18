@@ -1,15 +1,13 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-    Layout = "_Layout";
-}
+﻿@{ ViewData["Title"] = "Home Page";
+                Layout = "_Layout"; }
 
-<div class="home-banner">
+<!--<div class="home-banner">
     <h1>Welcome</h1>
     <p><a href="https://docs.microsoft.com/aspnet/core">Build Web apps with ASP.NET Core</a></p>
 </div>
-
-<div class="home-image">
-    <script>
+-->
+    <div class="home-image">
+        <script>
         //$("#homeimage").attr("src", data[0]);
 
         //setInterval(ajaxCall, 5000);
@@ -38,31 +36,37 @@
 
                             }
                         });
-    </script>
+        </script>
 
-    <img id="homeimage" class="homeimage" src="" alt="" />
-    <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
-</div>
+        <img id="homeimage" class="homeimage" src="" alt="" />
+        <h1 class="hero-text">Adam James</h1>
+        <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
+    </div>
 
 
 <div class="honey">
     <p>
-        Lorem ipsum dolor sit amet.
+        Example Work
     </p>
 </div>
 
 <div class="work-experience">
     <ul>
         <li>
-            <p>Russell Standard</p>
+            <a asp-controller="Home" asp-action="RussellStandard"><h1 style="font-size:1.2rem; color: #091852; margin-top:20px;">RussellStandard</h1></a>
+            <img src="images/rs-slice-1-thumb.jpg" />
+            <img src="images/rs-slice-2-thumb.jpg" />
+            <img src="images/rs-slice-3-thumb.jpg" />
         </li>
         <li>
-            <p>ASCE</p>
+            <a asp-controller="Home" asp-action="ASCE"><h1 style="font-size:1.2rem; color: #091852; margin-top:20px;">ASCE</h1></a>
+            <img src="images/asce1-thumb.jpg" />
+            <img src="images/asce2-thumb.jpg" />
         </li>
     </ul>
 </div>
 
-<div class="homey-images">
+<div class="homey-images" style="display:none;">
     <img class="" src="images/bottles2.jpg" alt="" />
     <img class="" src="images/cool-bridge.jpg" alt="" />
     <img class="" src="images/tucco_centered.jpg" alt="" />
@@ -74,20 +78,22 @@
 </div>
 
 <div class="code-sandbox">
-    <p>Welcome to Adam James's code sandbox.</p>
+    <p>Skills and Technologies</p>
 </div>
 
 <div class="home-textbox1">
-    <p>Just a little bit of it can bring you up or down.</p>
+    <p>.Net Core</p>
 </div>
 <div class="home-textbox2">
-    <p>Just a little bit of it can bring you up or down.</p>
+    <p>C#</p>
 </div>
 
+<!-- 
 <div style="grid-column: 1 / -1; text-align: center; margin-bottom: 40px;">
     <p>OnClick this button will call a method or function or action result on the server, handled by c# code.</p>
     <a asp-controller="Home" asp-action="RussellStandard"><h1 style="font-size:2rem; color: #091852; margin-top:20px;">RussellStandard</h1></a>
 </div>
+-->
 
 <div class="work-showcase-box">
     <div>
@@ -100,6 +106,7 @@
         <img src="~/images/rs-slice-3.jpg" />
     </div>
 </div>
+
 
 <div class="resume-download">
     <a href="~/resume.docx">Download Resume DOCX</a>
