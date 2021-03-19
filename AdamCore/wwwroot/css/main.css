@@ -1076,9 +1076,48 @@ header{
         color: #333333;
     }
 
-    .rs-header{
+    .rs-header {
         grid-column: 2 / 5;
     }
+        .rs-header ul {
+            margin: 10px 0 0 0;
+        }
+            .rs-header ul li {
+                margin: 10px 0;
+                
+            }
+    .rs-tasks {
+        grid-column: 2 / 5;
+    }
+        .rs-tasks ul {
+            margin: 10px 0 0 0;
+        }
+            .rs-tasks ul li {
+                margin: 10px 0;
+            }
+
+.asce-header {
+    grid-column: 2 / 5;
+}
+
+    .asce-header ul {
+        margin: 10px 0 0 0;
+    }
+
+        .asce-header ul li {
+            margin: 10px 0;
+        }
+.asce-tasks {
+    grid-column: 2 / 5;
+}
+
+    .asce-tasks ul {
+        margin: 10px 0 0 0;
+    }
+
+        .asce-tasks ul li {
+            margin: 10px 0;
+        }
 
 .resume-education ul {
     margin: 12px 0 0 0;
@@ -1576,6 +1615,7 @@ header{
     padding: 10px;
     margin: 0 4px;
     background-color: #f7f8f9;
+    text-decoration: none;
 }
     .resume-download a:hover {
         background-color: #f1f2f3;
