@@ -1077,8 +1077,8 @@ header{
     }
 
     .rs-header {
-        grid-column: 3 / 6;
-        margin: 40px 0;
+        grid-column: 2 / 6;
+        margin: 40px 0 40px 40px;
     }
         .rs-header ul {
             margin: 10px 0 0 0;
@@ -1088,18 +1088,19 @@ header{
                 
             }
     .rs-tasks {
-        margin: 40px 0;
-        grid-column: 3 / 5;
+        margin: 40px 0 40px 40px;
+        grid-column: 2 / 6;
     }
         .rs-tasks ul {
             margin: 10px 0 0 0;
         }
             .rs-tasks ul li {
                 margin: 10px 0;
+                line-height: 1.2;
             }
 
 .rs-site-buttons {
-    grid-column: 6 / 7;
+    grid-column: 7 / 8;
     margin: 40px 0;
 }
 .rs-site-buttons ul {
@@ -1121,8 +1122,8 @@ header{
 
 
 .asce-header {
-    grid-column: 3 / 6;
-    margin: 40px 0;
+    grid-column: 2 / 6;
+    margin: 40px 0 40px 40px;
 }
 
     .asce-header ul {
@@ -1133,8 +1134,8 @@ header{
             margin: 10px 0;
         }
 .asce-tasks {
-    margin: 40px 0;
-    grid-column: 3 / 5;
+    margin: 40px 0 40px 40px;
+    grid-column: 2 / 6;
 }
 
     .asce-tasks ul {
@@ -1146,7 +1147,7 @@ header{
         }
 
 .asce-site-buttons {
-    grid-column: 6 / 7;
+    grid-column: 7 / 8;
     margin: 40px 0;
 }
 
