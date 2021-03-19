@@ -1077,7 +1077,8 @@ header{
     }
 
     .rs-header {
-        grid-column: 2 / 5;
+        grid-column: 3 / 6;
+        margin: 40px 0;
     }
         .rs-header ul {
             margin: 10px 0 0 0;
@@ -1087,7 +1088,8 @@ header{
                 
             }
     .rs-tasks {
-        grid-column: 2 / 5;
+        margin: 40px 0;
+        grid-column: 3 / 5;
     }
         .rs-tasks ul {
             margin: 10px 0 0 0;
@@ -1096,8 +1098,31 @@ header{
                 margin: 10px 0;
             }
 
+.rs-site-buttons {
+    grid-column: 6 / 7;
+    margin: 40px 0;
+}
+.rs-site-buttons ul {
+}
+    .rs-site-buttons ul li {
+        margin-bottom: 40px;
+    }
+    .rs-site-buttons ul li a {
+        border: 1px solid #c6c6c6;
+        padding: 10px;
+
+        background-color: #f7f8f9;
+        text-decoration: none;
+    }
+        .rs-site-buttons ul li a:hover {
+            background-color: #f1f2f3;
+        }
+
+
+
 .asce-header {
-    grid-column: 2 / 5;
+    grid-column: 3 / 6;
+    margin: 40px 0;
 }
 
     .asce-header ul {
@@ -1108,7 +1133,8 @@ header{
             margin: 10px 0;
         }
 .asce-tasks {
-    grid-column: 2 / 5;
+    margin: 40px 0;
+    grid-column: 3 / 5;
 }
 
     .asce-tasks ul {
@@ -1118,6 +1144,29 @@ header{
         .asce-tasks ul li {
             margin: 10px 0;
         }
+
+.asce-site-buttons {
+    grid-column: 6 / 7;
+    margin: 40px 0;
+}
+
+    .asce-site-buttons ul {
+    }
+
+        .asce-site-buttons ul li {
+            margin-bottom: 40px;
+        }
+
+            .asce-site-buttons ul li a {
+                border: 1px solid #c6c6c6;
+                padding: 10px;
+                background-color: #f7f8f9;
+                text-decoration: none;
+            }
+
+                .asce-site-buttons ul li a:hover {
+                    background-color: #f1f2f3;
+                }
 
 .resume-education ul {
     margin: 12px 0 0 0;
@@ -1225,6 +1274,17 @@ header{
 }
 .work-experience ul li p {
 }
+    .work-experience ul li a {
+        text-decoration: none;
+    }
+        .work-experience ul li a:hover h1 {
+            color: #1741e4;
+        }
+    .work-experience ul li a h1 {
+        font-size: 1.4rem;
+        color: #091852;
+        margin-top: 20px
+    }
     .work-experience ul li img {
         margin: 10px;
         height: 200px;
