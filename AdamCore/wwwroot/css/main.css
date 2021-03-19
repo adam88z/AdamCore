@@ -185,7 +185,7 @@ header{
         grid-column: 1 / -1;
         object-fit: cover;
         opacity: .9;
-        filter: brightness(50%);
+        filter: brightness(80%);
     }
 
 .homeimage {
@@ -247,6 +247,33 @@ header{
     padding: 20px;
     border: 1px solid #e1e2e3;
 }
+
+.home-skills-list1 {
+    grid-column: 2 / 5;
+}
+    .home-skills-list1 li {
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #e1e2e3;
+    }
+    .home-skills-list1 li p {
+
+    }
+
+    .home-skills-list2 {
+        grid-column: 5 / 8;
+    }
+        .home-skills-list2 li {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #e1e2e3;
+        }
+
+        .home-skills-list2 li p {
+
+        }
 
 .code-sandbox {
     grid-column: 1 / -1;
@@ -1047,6 +1074,10 @@ header{
     .resume-russell a {
         text-decoration: none;
         color: #333333;
+    }
+
+    .rs-header{
+        grid-column: 2 / 5;
     }
 
 .resume-education ul {
