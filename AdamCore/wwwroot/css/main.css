@@ -1272,6 +1272,7 @@ header{
 .work-experience ul {
 }
 .work-experience ul li {
+    text-align:center;
 }
 .work-experience ul li p {
 }
@@ -1288,7 +1289,7 @@ header{
     }
     .work-experience ul li img {
         margin: 10px;
-        height: 200px;
+        height: 160px;
         border: 1px solid #e1e2e3;
         border-radius: 4px;
         box-shadow: 3px 4px 6px hsla(3,10%,60%,3);
@@ -1686,6 +1687,13 @@ header{
 
 
 @media screen and (min-width: 480px) { /* STYLES ABOVE 480px */
+
+    .work-experience ul li {
+        text-align: left;
+    }
+    .work-experience ul li img {
+        height: 200px
+    }
 
     .col1 {
         grid-column: 1 / 3;
