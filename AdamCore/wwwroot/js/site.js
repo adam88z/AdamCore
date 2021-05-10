@@ -3,6 +3,22 @@
 
 // Write your JavaScript code.
 
+var APIKEY = "CgMHXdbedJ2T6DiUi6VrYWWqDIxcW2EQcC6tfxXg";
+
+$.ajax({
+    url: 'https://api.nasa.gov/planetary/apod?api_key=APIKEY', //retrieves data
+    type: 'get',
+    data: 'data',
+    contentType: 'false',
+    success: function (data) {
+        document.getElementById('NASA-APOD').src = data.url;
+    }
+});
+
+
+
+
+
 function ImageSlider() {
 
     for (var i = 0; i < 10; i++) {
@@ -124,3 +140,4 @@ function functionHamburgerMenu(x) {
         // Animation complete.
     });
 }
+

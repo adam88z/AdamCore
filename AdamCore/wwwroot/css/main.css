@@ -200,9 +200,9 @@ header{
     font-size: 3rem;
     padding: 20px;
     text-align: center;
-    border: 1px solid #fff;
+    /*border: 1px solid #fff;*/
     position: absolute;
-    top: 160px;
+    top: 60px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -1280,12 +1280,15 @@ header{
         text-decoration: none;
     }
         .work-experience ul li a:hover h1 {
-            color: #1741e4;
+            background-color: #f1f2f3;
         }
     .work-experience ul li a h1 {
-        font-size: 1.4rem;
-        color: #091852;
-        margin-top: 20px
+        margin-top: 20px;
+        border: 1px solid #c6c6c6;
+        padding: 10px;
+
+        background-color: #f7f8f9;
+        text-decoration: none;
     }
     .work-experience ul li img {
         margin: 10px;
@@ -1710,7 +1713,7 @@ header{
         text-align: left;
     }
     .work-experience ul li img {
-        height: 200px
+        height: 300px
     }
 
     .col1 {
@@ -1758,17 +1761,39 @@ header{
 	z-index: 2;
 }
 
-.honey {
+.home-paragraph1 {
     grid-column: 1 / -1;
     margin-bottom: 2rem;
 }
-.honey p {
-    text-align: center;
-    font-size: 1rem;
-}
+    .home-paragraph1 p {
+        text-align: center;
+        font-size: 1rem;
+    }
 
+    .ajax-code {
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: column;
+    }
+        .ajax-code img {
+            width: 100%;
+            flex: 1;
+            overflow: hidden;
+            display: block;
+        }
+        .ajax-code p {
+            width: 100%;
+            margin: 20px 0 0 20px;
+            flex: 1;
+            display: block;
+            font-size: 1.2rem;
+        }
 
 @media screen and (min-width: 600px) { /* STYLES ABOVE 600px */
+    .ajax-code {
+        grid-column: 2/8;
+        flex-direction: row;
+    }
     .navbar-container-menu {
         grid-column: 2/5;
     }
