@@ -1,6 +1,8 @@
-﻿:root {
-    /*font-family: 'Open Sans', sans-serif;
-    font-family: 'Montserrat', sans-serif;*/
+﻿/*
+:root {
+font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
     --line-height: 1.6;
     --background-color: #005192;
     --color-text-awesomeblue: #0070ba;
@@ -76,8 +78,8 @@
     --duration-promptly: .5s;
     --duration-slowly: 1s;
 }
-
-body {
+*/
+    body {
     background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
@@ -200,13 +202,12 @@ header{
     font-size: 3rem;
     padding: 20px;
     text-align: center;
-    /*border: 1px solid #fff;*/
     position: absolute;
-    top: 60px;
+    top: 150px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    color: #fff;
+    color: #f1f2f3;
 }
 .homey-images {
     grid-column: 2 / 8;
@@ -253,7 +254,7 @@ header{
 }
     .home-skills-list1 li {
         text-align: center;
-        margin: 20px;
+        margin: 0 20px 20px 0;
         padding: 20px;
         border: 1px solid #e1e2e3;
     }
@@ -266,7 +267,7 @@ header{
     }
         .home-skills-list2 li {
             text-align: center;
-            margin: 20px;
+            margin: 0 0 20px 20px;
             padding: 20px;
             border: 1px solid #e1e2e3;
         }
@@ -1267,7 +1268,7 @@ header{
 .work-experience {
     grid-column: 2 / 8;
     border-top: 1px solid #ccc;
-    padding: 10px;
+    margin-bottom: 2rem;
 }
 .work-experience ul {
 }
@@ -1286,17 +1287,20 @@ header{
         margin-top: 20px;
         border: 1px solid #c6c6c6;
         padding: 10px;
-
+        text-align: center;
+        letter-spacing: .10rem;
         background-color: #f7f8f9;
         text-decoration: none;
     }
     .work-experience ul li img {
-        margin: 10px;
+        margin: 20px 0;
         height: 160px;
-        border: 1px solid #e1e2e3;
         border-radius: 4px;
         box-shadow: 3px 4px 6px hsla(3,10%,60%,3);
     }
+        .work-experience ul li img:hover {
+            filter: brightness(.94);
+        }
 .navigation {
     /*overflow: hidden;*/
 	grid-column: 6 / 8;
@@ -1710,10 +1714,13 @@ header{
     }
 
     .work-experience ul li {
-        text-align: left;
+        text-align: center;
     }
     .work-experience ul li img {
-        height: 300px
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+        filter: grayscale(100%);
     }
 
     .col1 {
@@ -1767,7 +1774,7 @@ header{
 }
     .home-paragraph1 p {
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .ajax-code {

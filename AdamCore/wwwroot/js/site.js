@@ -3,6 +3,7 @@
 
 // Write your JavaScript code.
 
+/*
 var APIKEY = "CgMHXdbedJ2T6DiUi6VrYWWqDIxcW2EQcC6tfxXg";
 
 $.ajax({
@@ -14,7 +15,27 @@ $.ajax({
         document.getElementById('NASA-APOD').src = data.url;
     }
 });
+*/
 
+
+var NasaUrl = 'https://api.nasa.gov/planetary/apod';
+var NasaAPIKey = 'CgMHXdbedJ2T6DiUi6VrYWWqDIxcW2EQcC6tfxXg';
+
+var request = new XMLHttpRequest(); //request = new XMLHtppRequest Object
+request.open('GET', NasaUrl + '?api_key=' + NasaAPIKey, true);
+
+request.addEventListener('load', function () {
+
+    if (request.status >= 200 && request.status < 400) {
+        var response = JSON.parse(request.responseText);
+        console.log(response);
+        document.getElementById('NASA-APOD').src = response.url;
+    }
+    else {
+        console.log("Error in network request: " + request.statusText);
+    }
+});
+request.send(null);
 
 
 

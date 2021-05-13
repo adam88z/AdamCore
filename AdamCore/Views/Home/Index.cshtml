@@ -9,7 +9,6 @@
 <div class="home-image">
     <script>
         //$("#homeimage").attr("src", data[0]);
-
         //setInterval(ajaxCall, 5000);
 
                         $.ajax({
@@ -43,10 +42,24 @@
     <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
 </div>
 
+<!--
+<div
+     style="
+    grid-column: 2/8;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+"
+     >
+    <img id="NASA-APOD" style="height:400px; width: auto; border-radius: 0; border: none; object-fit: contain;" src="" alt="" />
+    <p style="margin: 20px 0 0 20px;">NASA's Picture Of The Day API.</p>
+</div>
+-->
 
 <div class="home-paragraph1">
     <p>
-        Example Work
+        Recent Work
     </p>
 </div>
 
@@ -55,12 +68,16 @@
         <li>
             <a asp-controller="Home" asp-action="RussellStandard"><h1>RussellStandard</h1></a>
             <a asp-controller="Home" asp-action="RussellStandard"><img src="images/rs-slice-1-thumb.jpg" /></a>
-            <a asp-controller="Home" asp-action="RussellStandard"><img src="images/rs-slice-2-thumb.jpg" /></a>
-            <a asp-controller="Home" asp-action="RussellStandard"><img src="images/rs-slice-3-thumb.jpg" /></a>
+            <!--
+                <a asp-controller="Home" asp-action="RussellStandard"><img src="images/rs-slice-2-thumb.jpg" /></a>
+                <a asp-controller="Home" asp-action="RussellStandard"><img src="images/rs-slice-3-thumb.jpg" /></a
+            -->
         </li>
         <li>
             <a asp-controller="Home" asp-action="ASCE"><h1>ASCE</h1></a>
-            <a asp-controller="Home" asp-action="ASCE"><img src="images/asce1-thumb.jpg" /></a>
+            <!--
+                <a asp-controller="Home" asp-action="ASCE"><img src="images/asce1-thumb.jpg" /></a>
+            -->
             <a asp-controller="Home" asp-action="ASCE"><img src="images/asce2-thumb.jpg" /></a>
         </li>
     </ul>
@@ -79,7 +96,7 @@
 </div>
 -->
 
-<div class="code-sandbox">
+<div class="home-paragraph1">
     <p>Skills and Technologies</p>
 </div>
 
@@ -101,11 +118,12 @@
     <li><p>AJAX</p></li>
 </ul>
 
+<!--
 <div class="ajax-code">
     <img src="~/images/code.png" alt="ajax-code" />
     <p>Knowledge of usefull Javascript technologies</p>
 </div>
-
+-->
 
 <!--
 <div style="grid-column: 1 / -1; text-align: center; margin-bottom: 40px;">
