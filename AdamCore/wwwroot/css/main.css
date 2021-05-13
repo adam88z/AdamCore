@@ -1,4 +1,5 @@
 ﻿/*
+    //CSS variables
 :root {
 font-family: 'Open Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
@@ -168,7 +169,7 @@ header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/thumbnails/rock-background.jpg);
 }
 
-.home-image {
+.hero-image {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
     justify-content: space-around;
@@ -183,7 +184,7 @@ header{
     align-content: center;
     padding: 0;
 }
-    .home-image img {
+    .hero-image img {
         grid-column: 1 / -1;
         object-fit: cover;
         opacity: .9;

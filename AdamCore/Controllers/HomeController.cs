@@ -63,6 +63,7 @@ namespace AdamCore.Controllers
             return View();
         }
 
+        [HttpGet]
         public String[] ImageUploadGet()
         {
 

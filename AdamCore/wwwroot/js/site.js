@@ -3,19 +3,19 @@
 
 // Write your JavaScript code.
 
+
 /*
 var APIKEY = "CgMHXdbedJ2T6DiUi6VrYWWqDIxcW2EQcC6tfxXg";
 
 $.ajax({
-    url: 'https://api.nasa.gov/planetary/apod?api_key=APIKEY', //retrieves data
     type: 'get',
-    data: 'data',
+    url: 'https://api.nasa.gov/planetary/apod?api_key=APIKEY', //retrieves data
     contentType: 'false',
+    data: 'data',
     success: function (data) {
         document.getElementById('NASA-APOD').src = data.url;
     }
 });
-*/
 
 
 var NasaUrl = 'https://api.nasa.gov/planetary/apod';
@@ -36,8 +36,7 @@ request.addEventListener('load', function () {
     }
 });
 request.send(null);
-
-
+*/
 
 
 function ImageSlider() {
@@ -124,12 +123,6 @@ function stickyHeader() {
         navbarcontainer.classList.remove("sticky");
     }
 }
-
-
-
-
-
-
 
 
 // This says if the mouse click IS NOT hamburger or and of hamburgers descendants THEN remove the overlay class.
