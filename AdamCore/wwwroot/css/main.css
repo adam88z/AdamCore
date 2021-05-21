@@ -1288,6 +1288,8 @@ header{
 }
     .work-experience ul li a {
         text-decoration: none;
+        display: block;
+        margin: 20px 0;
     }
         .work-experience ul li a:hover h1 {
             background-color: #f1f2f3;
@@ -1302,9 +1304,10 @@ header{
         text-decoration: none;
     }
     .work-experience ul li img {
-        width: 200px;
-        margin: 20px 0;
-        height: 160px;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        height: 80%;
         border-radius: 4px;
         box-shadow: 3px 4px 6px hsla(3,10%,60%,3);
     }
@@ -1733,8 +1736,7 @@ header{
         text-align: center;
     }
     .work-experience ul li img {
-        width: 340px;
-        height: 340px;
+        max-height: 340px;
         object-fit: cover;
     }
 
@@ -1814,7 +1816,7 @@ header{
 @media screen and (min-width: 600px) { /* STYLES ABOVE 600px */
 
     .work-experience ul li img {
-        width: 400px;
+        max-height: 400px;
     }
     .ajax-code {
         grid-column: 2/8;
@@ -2063,7 +2065,7 @@ header{
 
 @media screen and (min-width: 720px) { /* STYLES ABOVE 720px */
     .work-experience ul li img {
-        width: 500px;
+        max-width: 500px;
     }
 
     .ziggy {
