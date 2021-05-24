@@ -8,9 +8,16 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using MySql.Data.EntityFrameworkCore.Extensions;
+using MySql.Data.EntityFrameworkCore;
+using MySql.Data;
+using AdamCore.Models;
 
 namespace AdamCore
 {
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -25,6 +32,8 @@ namespace AdamCore
         {
             //services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            
+            services.AddDbContext<MySQLDatabaseContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySQLDatabase")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,5 +63,8 @@ namespace AdamCore
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
+
+
     }
 }

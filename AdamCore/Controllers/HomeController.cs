@@ -11,11 +11,13 @@ namespace AdamCore.Controllers
 {
     public class HomeController : Controller
     {
+        
 
         public string DatabaseConnection ()
         {
             string a = "hi";
             return a;
+            
         }
 
         private readonly ILogger<HomeController> _logger;
@@ -27,8 +29,8 @@ namespace AdamCore.Controllers
 
         public IActionResult Index()
         {
-
-            return View();
+            Users User = new Users();
+            return View(User);
         }
 
         public IActionResult Privacy()

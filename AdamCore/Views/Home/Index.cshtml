@@ -1,5 +1,10 @@
-﻿@{ ViewData["Title"] = "Home Page";
-    Layout = "_Layout"; }
+﻿@model AdamCore.Models.MySQLDatabaseContext
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
 
 <!--<div class="home-banner">
     <h1>Welcome</h1>
@@ -45,6 +50,32 @@
 
     <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
 </div>
+
+<div>
+    <p>@Html.DisplayFor(model => model.FirstName)</p>
+</div>
+<div>
+    @Html.DisplayFor(model => model.MiddleName)
+</div>
+<div>
+    @Html.DisplayFor(model => model.LastName)
+</div>
+<div>
+    @Html.DisplayFor(model => model.UserName)
+</div>
+<div>
+    @Html.DisplayFor(model => model.Password)
+</div>
+<div>
+    @Html.DisplayFor(model => model.ChangePassword)
+</div>
+<div>
+    @Html.DisplayFor(model => model.ID)
+</div>
+<div>
+    @Html.DisplayFor(model => model.Email)
+</div>
+
 
 
 <div class="home-paragraph1">
