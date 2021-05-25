@@ -1,4 +1,4 @@
-﻿@model AdamCore.Models.MySQLDatabaseContext
+﻿@model AdamCore.Models.Users
 
 @{
     ViewData["Title"] = "Home Page";
@@ -51,30 +51,32 @@
     <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
 </div>
 
-<div>
-    <p>@Html.DisplayFor(model => model.FirstName)</p>
+<div class="database-table-box">
+    <table class="database-table">
+        <tr>
+            <th>FirstName</th>
+            <th>MiddleName</th>
+            <th>LastName</th>
+            <th>UserName</th>
+            <th>Password</th>
+            <th>ChangePassword</th>
+            <th>ID</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(model => model.FirstName)</td>
+            <td>@Html.DisplayFor(model => model.MiddleName)</td>
+            <td>@Html.DisplayFor(model => model.LastName)</td>
+            <td>@Html.DisplayFor(model => model.UserName)</td>
+            <td>@Html.DisplayFor(model => model.Password)</td>
+            <td>@Html.DisplayFor(model => model.ChangePassword)</td>
+            <td>@Html.DisplayFor(model => model.ID)</td>
+            <td>@Html.DisplayFor(model => model.Email)</td>
+        </tr>
+    </table>
 </div>
-<div>
-    @Html.DisplayFor(model => model.MiddleName)
-</div>
-<div>
-    @Html.DisplayFor(model => model.LastName)
-</div>
-<div>
-    @Html.DisplayFor(model => model.UserName)
-</div>
-<div>
-    @Html.DisplayFor(model => model.Password)
-</div>
-<div>
-    @Html.DisplayFor(model => model.ChangePassword)
-</div>
-<div>
-    @Html.DisplayFor(model => model.ID)
-</div>
-<div>
-    @Html.DisplayFor(model => model.Email)
-</div>
+
+
 
 
 

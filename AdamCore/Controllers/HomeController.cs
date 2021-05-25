@@ -27,10 +27,10 @@ namespace AdamCore.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(Users model)
         {
-            Users User = new Users();
-            return View(User);
+            
+            return View(model);
         }
 
         public IActionResult Privacy()

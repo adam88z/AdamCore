@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Data;
 
 namespace AdamCore.Models
 {
@@ -11,8 +13,8 @@ namespace AdamCore.Models
         public MySQLDatabaseContext(DbContextOptions<MySQLDatabaseContext> options) : base(options)
         { }
 
-        public MySQLDatabaseContext()
-        { }
+        //public MySQLDatabaseContext()
+        //{ }
 
 
     }
