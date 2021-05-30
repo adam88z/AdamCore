@@ -1,22 +1,37 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Data;
+using Microsoft.EntityFrameworkCore; 
+
 
 namespace AdamCore.Models
 {
 
-    public partial class MySQLDatabaseContext : DbContext
+    public partial class MyDbContext : DbContext
     {
-        public DbSet<Users> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        public MySQLDatabaseContext(DbContextOptions<MySQLDatabaseContext> options) : base(options)
-        { }
+
+
+        public MyDbContext(DbContextOptions<MyDbContext> options)
+            : base(options)
+        { 
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseMySQL("Database=localdb;server=127.0.0.1;port=53784;User Id=azure;Password=6#vWHD_$");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().ToTable("user");
+        }
+
+
 
         //public MySQLDatabaseContext()
         //{ }
 
 
-    }
+    } 
 
 }

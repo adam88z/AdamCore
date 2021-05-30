@@ -27,7 +27,7 @@ namespace AdamCore.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(Users model)
+        public IActionResult Index(User model)
         {
             
             return View(model);
