@@ -1,4 +1,4 @@
-﻿@model  User
+﻿@model  Users
 
 @{
     ViewData["Title"] = "Home Page";
@@ -53,6 +53,7 @@
 
 <div class="database-table-box">
     <table class="database-table">
+        @Html.ActionLink("clickme", "DatabaseConnection", "Home")
         <tr>
             <th>FirstName</th>
             <th>MiddleName</th>
@@ -63,6 +64,7 @@
             <th>ID</th>
             <th>Email</th>
         </tr>
+
         <tr>
             <td>@Html.DisplayFor(model => model.FirstName)</td>
             <td>@Html.DisplayFor(model => model.MiddleName)</td>
