@@ -1,4 +1,4 @@
-﻿@model  Users
+﻿@model Users
 
 @{
     ViewData["Title"] = "Home Page";
@@ -13,7 +13,7 @@
 -->
 <div class="hero-image">
     <script>
-        //$("#homeimage").attr("src", data[0]); 
+        //$("#homeimage").attr("src", data[0]);
         //setInterval(ajaxCall, 5000);
 
                         $.ajax({
@@ -51,9 +51,32 @@
     <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
 </div>
 
+<button id="btnDataGet" href="#" onclick="DataGet()">DataGet</button>
+
+<script>
+    function DataGet() {
+
+        $.ajax({
+            url: "/Home/DatabaseConnection",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (Status, response) {
+                alert(Status, response);
+            },
+            error: function (jqXHR, Status, errorThrown, response) {
+                alert(jqXHR, Status, errorThrown, response);
+            }
+
+        })
+    }
+
+</script>
+
 <div class="database-table-box">
     <table class="database-table">
-        @Html.ActionLink("clickme", "DatabaseConnection", "Home")
+        @*@Html.ActionLink("clickme", "DatabaseConnection", "Home")*@
+
         <tr>
             <th>FirstName</th>
             <th>MiddleName</th>
@@ -77,6 +100,7 @@
         </tr>
     </table>
 </div>
+
 
 
 

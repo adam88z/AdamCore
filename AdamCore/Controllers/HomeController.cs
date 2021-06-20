@@ -15,31 +15,37 @@ namespace AdamCore.Controllers
     {
         
 
-        public IActionResult DatabaseConnection()
+        public ActionResult DatabaseConnection()
         {
             //string connStr = "Database=localdb;Data Source=127.0.0.1:53784;User Id=azure;Password=6#vWHD_$";
-            string connStr = "Server=127.0.0.1;Port=53784;Database=localdb;Uid=azure;Pwd=6#vWHD_$;";
+
+            //127.0.0.1
+            //
             //Database=localdb;Data Source=127.0.0.1:53784;User Id=azure;Password=6#vWHD_$
             //string Server = "127.0.0.1:53784";
             //string Database = "localdb";
             //string Uid = "azure";
             //string Pwd = "6#vWHD_$";
-            MySqlConnection connection = new MySqlConnection(connStr);
 
-            try
-            {
-                connection.Open();
+            string connStr = "Server=127.0.0.1;Port=53784;Database=localdb;Uid=azure;Pwd=6#vWHD_$;";
 
-                Console.Write("successful connection");
+            using (MySqlConnection connection = new MySqlConnection(connStr))
+            { 
+                //currently throwing an exception saying the database server refused the connection.
+                try
+                {
+                    connection.Open();
 
-                connection.Close();
+                    connection.Close();
+
+                    return Json(new { response = "success?"});
+                }
+                catch (MySqlException ex)
+                {
+                    return Json(new { response = ex.ToString() });
+                }
             }
-            catch (MySqlException ex)
-            {
-                Console.Write(ex.Message);
-            }
 
-            return RedirectToAction("Index");
         }
 
 
