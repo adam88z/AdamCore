@@ -5,7 +5,6 @@
     Layout = "_Layout";
 }
 
-
 <!--<div class="home-banner">
     <h1>Welcome</h1>
     <p><a href="https://docs.microsoft.com/aspnet/core">Build Web apps with ASP.NET Core</a></p>
@@ -16,30 +15,30 @@
         //$("#homeimage").attr("src", data[0]);
         //setInterval(ajaxCall, 5000);
 
-                        $.ajax({
-                            url: '@Url.Action("ImageUploadGet", "Home")', //retrieves the array and stores it in 'data'
-                            data: 'data',
-                            success: function (data) {
-                                var i = 0;
-                                $("#homeimage").attr("src", data[i]);
+        $.ajax({
+            url: '@Url.Action("ImageUploadGet", "Home")', //retrieves the array and stores it in 'data'
+            data: 'data',
+            success: function (data) {
+                var i = 0;
+                $("#homeimage").attr("src", data[i]);
 
-                                var i = 0;
+                var i = 0;
 
-                                setInterval(function () {
-                                    document.getElementById("homeimage").src = data[i];
-                                    if (i == (data.length - 1)) {
-                                        i = 0;
-                                        //you can even clear interval here to make heading stay as last one in array
-                                        //cleanInterval(intervalId);
+                setInterval(function () {
+                    document.getElementById("homeimage").src = data[i];
+                    if (i == (data.length - 1)) {
+                        i = 0;
+                        //you can even clear interval here to make heading stay as last one in array
+                        //cleanInterval(intervalId);
 
-                                    } else {
-                                        i++;
-                                    }
-                                }, 8000)
+                    } else {
+                        i++;
+                    }
+                }, 8000)
 
 
-                            }
-                        });
+            }
+        });
     </script>
 
     <img id="homeimage" class="homeimage" src="" alt="" />
@@ -51,60 +50,59 @@
     <!--<img style="height:400px; width: 100%; border-radius: 0; border: none;" src="images/cool-bridge.jpg" alt="" />-->
 </div>
 
-<button id="btnDataGet" href="#" onclick="DataGet()">DataGet</button>
+    <button id="btnDataGet" href="#" onclick="DataGet()">DataGet</button>
 
-<script>
-    function DataGet() {
+    <script>
+        function DataGet() {
+            //data: {} is used when POST'ing to the server to send json data to the server.
 
-        $.ajax({
-            url: "/Home/DatabaseConnection",
-            type: "GET",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (Status, response) {
-                alert(Status, response);
-            },
-            error: function (jqXHR, Status, errorThrown, response) {
-                alert(jqXHR, Status, errorThrown, response);
-            }
+            //data in the ajax response is naturally expected and does not need to be named 'data'
+            //you can access objects within the returned data
+            $.ajax({
+                url: "/Home/DatabaseConnection",
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    alert(data.response);
+                    $('#usersForm').find('td').text(data.response[0]);
+                },
+                error: function () {
+                    alert("error");
+                }
 
-        })
-    }
+            })
+        }
+    </script>
 
-</script>
+<form name="usersForm" id="usersForm" method="POST" style="grid-column: 1/-1">
+    <div class="database-table-box">
+        <table class="database-table">
+            @*@Html.ActionLink("clickme", "DatabaseConnection", "Home")*@
 
-<div class="database-table-box">
-    <table class="database-table">
-        @*@Html.ActionLink("clickme", "DatabaseConnection", "Home")*@
+            <tr>
+                <th>FirstName</th>
+                <th>MiddleName</th>
+                <th>LastName</th>
+                <th>UserName</th>
+                <th>Password</th>
+                <th>ChangePassword</th>
+                <th>ID</th>
+                <th>Email</th>
+            </tr>
 
-        <tr>
-            <th>FirstName</th>
-            <th>MiddleName</th>
-            <th>LastName</th>
-            <th>UserName</th>
-            <th>Password</th>
-            <th>ChangePassword</th>
-            <th>ID</th>
-            <th>Email</th>
-        </tr>
-
-        <tr>
-            <td>@Html.DisplayFor(model => model.FirstName)</td>
-            <td>@Html.DisplayFor(model => model.MiddleName)</td>
-            <td>@Html.DisplayFor(model => model.LastName)</td>
-            <td>@Html.DisplayFor(model => model.UserName)</td>
-            <td>@Html.DisplayFor(model => model.Password)</td>
-            <td>@Html.DisplayFor(model => model.ChangePassword)</td>
-            <td>@Html.DisplayFor(model => model.ID)</td>
-            <td>@Html.DisplayFor(model => model.Email)</td>
-        </tr>
-    </table>
-</div>
-
-
-
-
-
+            <tr>
+                <td>@Html.DisplayFor(model => model.FirstName)</td>
+                <td>@Html.DisplayFor(model => model.MiddleName)</td>
+                <td>@Html.DisplayFor(model => model.LastName)</td>
+                <td>@Html.DisplayFor(model => model.UserName)</td>
+                <td>@Html.DisplayFor(model => model.Password)</td>
+                <td>@Html.DisplayFor(model => model.ChangePassword)</td>
+                <td>@Html.DisplayFor(model => model.ID)</td>
+                <td>@Html.DisplayFor(model => model.Email)</td>
+            </tr>
+        </table>
+    </div>
+</form>
 
 <div class="home-paragraph1">
     <p>
@@ -132,8 +130,6 @@
     </ul>
 </div>
 
-
-
 <div class="home-paragraph1">
     <p>Skills and Technologies</p>
 </div>
@@ -156,13 +152,10 @@
     <li><p>AJAX</p></li>
 </ul>
 
-
-
 <div class="resume-download">
     <a href="~/resume.docx">Download Resume DOCX</a>
     <a href="~/resume.pdf">Download Resume PDF</a>
 </div>
-
 
 <!--
 <div

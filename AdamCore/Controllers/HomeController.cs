@@ -6,48 +6,68 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AdamCore.Models;
-using MySql.Data.MySqlClient;
-
+using System.Data.SqlClient;
+using System.Data;
 
 namespace AdamCore.Controllers
 {
     public class HomeController : Controller
     {
-        
-
+        [HttpGet]
         public ActionResult DatabaseConnection()
         {
-            //string connStr = "Database=localdb;Data Source=127.0.0.1:53784;User Id=azure;Password=6#vWHD_$";
+            //A method that opens a connection to the SQL database then immediately closes the connection for testing.
+            string connStr = "Server = A2NWPLSK14SQL-v05.shr.prod.iad2.secureserver.net; Database = MyDatabase; User Id = datadude; Password = dav9T5*6;";
 
-            //127.0.0.1
-            //
-            //Database=localdb;Data Source=127.0.0.1:53784;User Id=azure;Password=6#vWHD_$
-            //string Server = "127.0.0.1:53784";
-            //string Database = "localdb";
-            //string Uid = "azure";
-            //string Pwd = "6#vWHD_$";
-
-            string connStr = "Server=127.0.0.1;Port=53784;Database=localdb;Uid=azure;Pwd=6#vWHD_$;";
-
-            using (MySqlConnection connection = new MySqlConnection(connStr))
-            { 
-                //currently throwing an exception saying the database server refused the connection.
+            using (SqlConnection connection  = new SqlConnection(connStr))
+            {
                 try
                 {
+                    //SqlDataAdapter da = new SqlDataAdapter();
+                    //DataSet ds = new DataSet();
+
+                    var sqlquery = "SELECT * FROM Users";
+                    List<string> dataResults = new List<string>();
+
                     connection.Open();
+                    SqlCommand command = new SqlCommand(sqlquery, connection);
 
+                    //using (SqlDataReader dr = command.ExecuteReader())
+                    //{
+                    //    if (dr.HasRows)
+                    //    {
+                    //        // Read advances to the next row.
+                    //        while (dr.Read())
+                    //        {
+
+                    //            var me = dr.GetString(dr.GetOrdinal("Firstname"));
+                    //        }
+                    //    }
+                    //}
+                    // the dataset automatically recieves and stores the data in-memory in a table like fashion.
+                    // working on retrieving the data and passing it to the front end with JSON in an ajax call.
+                    DataSet dataset = new DataSet();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataset);
+                    }
                     connection.Close();
+                    List<string> results = new List<string>();
+                    IndexViewModel model = new IndexViewModel();
+                    for (var i = 0; i <= dataset.Tables[0].Rows.Count - 1; i++)
+                    {
 
-                    return Json(new { response = "success?"});
+                        results.Add(dataset.Tables[0].Rows[i].ItemArray[0] + " -- " + dataset.Tables[0].Rows[i].ItemArray[1]);
+
+                    }
+                    return Json(new { response = results});
                 }
-                catch (MySqlException ex)
+                catch
                 {
-                    return Json(new { response = ex.ToString() });
+                    return Json(new { response = "adam fail" });
                 }
             }
-
         }
-
 
         private readonly ILogger<HomeController> _logger;
 

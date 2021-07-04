@@ -1,8 +1,6 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
-
 // Write your JavaScript code.
-
 
 /*
 var APIKEY = "CgMHXdbedJ2T6DiUi6VrYWWqDIxcW2EQcC6tfxXg";
@@ -16,7 +14,6 @@ $.ajax({
         document.getElementById('NASA-APOD').src = data.url;
     }
 });
-
 
 var NasaUrl = 'https://api.nasa.gov/planetary/apod';
 var NasaAPIKey = 'CgMHXdbedJ2T6DiUi6VrYWWqDIxcW2EQcC6tfxXg';
@@ -38,13 +35,11 @@ request.addEventListener('load', function () {
 request.send(null);
 */
 
-
 function ImageSlider() {
 
     for (var i = 0; i < 10; i++) {
 
     }
-
 }
 
 window.onscroll = function () {
@@ -101,16 +96,12 @@ window.onscroll = function () {
         } else { //object goes out of view (scrolling up)
         }
     });
-
     // When the user scrolls the page, execute myFunction 
     stickyHeader()
-
 } // End window on scroll function
 
-
-
 // Get the header
-var navbarcontainer = document.getElementById("navbar-container");
+var navbarcontainer = $("#navbar-container");
 // Get the offset position of the navbar 
 var sticky = navbarcontainer.offsetTop;
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position 
@@ -123,7 +114,6 @@ function stickyHeader() {
         navbarcontainer.classList.remove("sticky");
     }
 }
-
 
 // This says if the mouse click IS NOT hamburger or and of hamburgers descendants THEN remove the overlay class.
 // Overlay is applied when the user toggles the hamburger function
@@ -143,8 +133,12 @@ function functionHamburgerMenu(x) {
     //x.classList.toggle("change");
     //$(".hamburger-container").stopPropagation(); "stopPropogation" interrupts the operation of the DOM somehow
 
-    if ($(window).innerWidth() <= 600) { $(".hamburger-container").toggleClass("hamburger-stay"); }
-    if ($(window).innerWidth() > 600) { $(".hamburger-container").removeClass("hamburger-stay"); }
+    if ($(window).innerWidth() <= 600) {
+        $(".hamburger-container").toggleClass("hamburger-stay");
+    }
+    if ($(window).innerWidth() > 600) {
+        $(".hamburger-container").removeClass("hamburger-stay");
+    }
 
     $("#overlay").toggle();
 
@@ -155,3 +149,12 @@ function functionHamburgerMenu(x) {
     });
 }
 
+//Very nicely handles resizing the browser window while the hamburger navigation is active.
+window.onresize = function () { 
+    if ($(window).innerWidth() > 600) {
+        $("#navigation-container").hide();
+    }
+    else {
+        $("#navigation-container").show();
+    }
+}
